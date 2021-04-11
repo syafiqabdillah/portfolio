@@ -1,5 +1,5 @@
 # Portfolio of Syafiq Abdillah U
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66e4058b-6bd8-4ea0-9b7a-0288e8bdb444/deploy-status)](https://app.netlify.com/sites/syafiqau-portfolio/deploys)
 ## Build Setup
 
 ```bash
