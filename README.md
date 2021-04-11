@@ -1,4 +1,4 @@
-# frontend
+# Portfolio of Syafiq Abdillah U
 
 ## Build Setup
 
