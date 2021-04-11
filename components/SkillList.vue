@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="skill in list" :key="skill.name">
-      {{ skill.name }} - {{ expertise(skill.score) }}
+      {{ skill.name }} - {{ skill.score }}/10
     </li>
   </ul>
 </template>

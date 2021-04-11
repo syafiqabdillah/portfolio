@@ -105,6 +105,7 @@ export default {
 .body {
   padding: 3em 0;
   text-align: center;
+  background-color: whitesmoke;
 }
 .title {
   text-transform: uppercase;

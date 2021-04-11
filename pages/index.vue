@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="hero">
-      <img src="~assets/bg.jpg" alt="" />
+      <img class="bg" src="~assets/bg.jpg" alt="" />
       <div class="container text-center">
+        <Avatar />
         <h1 class="title">
           Solving <span class="red">problems</span><br />
           with &lt;<span class="green">code</span>/&gt;
@@ -10,21 +11,13 @@
         <p class="summary">
           I'm Syafiq, a <span class="fancy-text red">software engineer</span>.
           My hobby is to fulfil my
-          <span class="fancy-text red">curiosity</span> by coding countless side
+          <span class="fancy-text red">curiosity</span> by building side
           projects. My favourite korean dramas are
           <span class="fancy-text red"> Startup </span> &
-          <span class="fancy-text red"> Itaewon Class </span>. Tea and coffee
-          are my best friends.
+          <span class="fancy-text red"> Itaewon Class </span>. 🍵 and ☕ are my
+          best friends.
         </p>
-        <div class="links">
-          <i
-            v-for="social in socials"
-            :key="social.url"
-            data-aos="fade-up"
-            @click="toPage(social.url)"
-            :class="social.icon  + ' clickable'"
-          ></i>
-        </div>
+        <SocialLinks />
       </div>
     </div>
     <!-- Skills -->
@@ -34,35 +27,17 @@
 
 <script>
 export default {
-  data() {
-    return {
-      socials: {
-        twitter: {
-          url: 'https://www.twitter.com/umarghanis',
-          icon: 'icofont-twitter',
-        },
-        linkedin: {
-          url: 'https://www.linkedin.com/in/syafiq-abdillah-1b634b78/',
-          icon: 'icofont-linkedin',
-        },
-        github: {
-          url: 'https://www.github.com/syafiqabdillah',
-          icon: 'icofont-github',
-        },
-      },
-    }
-  },
-  methods: {
-    toPage(url) {
-      window.open(url, '_blank')
-    },
-  },
+  name: "Home",
 }
 </script>
 
 <style>
+:root {
+  --avatar-size: 170px;
+  --border-color: var(--accent);
+}
 .hero {
-  min-height: 500px;
+  min-height: 700px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -72,8 +47,12 @@ export default {
 .hero .container {
   margin: auto 0;
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hero img {
+
+.hero img.bg {
   background: #171717;
   width: 100%;
   height: 100%;
@@ -85,15 +64,5 @@ export default {
 .hero .title {
   font-weight: 900;
   font-size: 2.5rem;
-}
-/* Links */
-.links {
-  gap: 2em;
-  display: flex;
-  justify-content: center;
-  color: var(--light);
-}
-.links i {
-  font-size: 2rem;
 }
 </style>

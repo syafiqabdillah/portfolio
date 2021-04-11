@@ -21,12 +21,10 @@ export default {
   css: [
     '~/assets/css/global.css',
     '~/assets/icofont/icofont.min.css',
-    'aos/dist/aos.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/aos.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
