@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="title fancy-text">Skills</h2>
       <div class="skills">
-        <skill-card
+        <SkillCard
           v-for="card in skillCards"
           :key="card.name"
           :name="card.name"
@@ -15,10 +15,9 @@
 </template>
 
 <script>
-import SkillCard from './SkillCard.vue'
-import SkillList from './SkillList.vue'
+import SkillCard from "./SkillCard"
 export default {
-  components: { SkillList, SkillCard },
+  components: { SkillCard },
   name: 'Skills',
   data() {
     return {

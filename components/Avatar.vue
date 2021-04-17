@@ -10,16 +10,19 @@ export default {}
 </script>
 
 <style>
+:root {
+  --avatar-size: 170px;
+  --border-color: var(--accent);
+}
 .avatar-container {
   z-index: 0;
   position: relative;
   height: var(--avatar-size);
   width: var(--avatar-size);
-  transition: transform 200ms ease-in-out;
+  transition: transform 1s;
 }
-.avatar-container:hover,
-.avatar-container:focus {
-  transform: scale(1.5);
+.avatar-container:hover {
+  transform: scale(1.2);
   --border-color: var(--primary);
 }
 .rotating-border {
@@ -32,7 +35,15 @@ export default {}
   border-radius: 50%;
   border-style: dashed;
   border-color: var(--border-color);
-  animation: avatarBorderMove 20s linear infinite;
+  animation: rotatingBorder linear 20s infinite;
+}
+@keyframes rotatingBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 img.avatar {
   position: absolute;
@@ -44,13 +55,5 @@ img.avatar {
   border-radius: 50%;
   object-fit: cover;
   padding: 0.7em;
-}
-@keyframes avatarBorderMove {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 </style>
