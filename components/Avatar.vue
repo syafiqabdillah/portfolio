@@ -1,6 +1,8 @@
 <template>
-  <div class="avatar-container">
-    <div class="rotating-border"></div>
+  <div class="avatar-container group hover:scale-110 hover:-translate-y-4">
+    <div
+      class="h-[170px] w-[170px] rounded-full border-4 border-dotted border-lightseagreen group-hover:border-accent animate-spin-slow"
+    ></div>
     <img src="~/assets/img/syafiq.jpg" alt="" class="avatar" />
   </div>
 </template>
@@ -19,31 +21,7 @@ export default {}
   position: relative;
   height: var(--avatar-size);
   width: var(--avatar-size);
-  transition: transform 1s;
-}
-.avatar-container:hover {
-  transform: scale(1.2);
-  --border-color: var(--primary);
-}
-.rotating-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  height: var(--avatar-size);
-  width: var(--avatar-size);
-  border-radius: 50%;
-  border-style: dashed;
-  border-color: var(--border-color);
-  animation: rotatingBorder linear 20s infinite;
-}
-@keyframes rotatingBorder {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transition: transform 200ms;
 }
 img.avatar {
   position: absolute;

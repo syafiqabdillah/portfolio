@@ -1,19 +1,17 @@
 <template>
-  <div class="hero">
+  <div class="hero min-h-screen min-w-[320px]">
       <img class="bg" src="~assets/bg.jpg" alt="" />
-      <div class="container text-center">
+      <div class="container text-center p-4">
         <Avatar />
-        <h1 class="title">
-          Solving <span class="red">problems</span><br />
-          with &lt;<span class="green">code</span>/&gt;
+        <h1 class="font-bold text-3xl md:text-5xl mb-4">
+          Solving <span class="red fancy-text">problems</span><br />
+          with &lt;<span class="green fancy-text">code</span>/&gt;
         </h1>
         <p class="summary">
           I'm Syafiq, a <span class="fancy-text red">software engineer</span>.
           My hobby is to fulfil my
-          <span class="fancy-text red">curiosity</span> by building side
-          projects. My favourite korean dramas are
-          <span class="fancy-text red"> Startup </span> &
-          <span class="fancy-text red"> Itaewon Class </span>. 🍵 and ☕ are my
+          <span class="fancy-text red">curiosity</span> by building <span class="fancy-text red">side
+          projects</span>. 🍵 &nbsp;and ☕ &nbsp;are my
           best friends.
         </p>
         <SocialLinks />
@@ -27,9 +25,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .hero {
-  min-height: 700px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -56,5 +53,8 @@ export default {
 .hero .title {
   font-weight: 900;
   font-size: 2.5rem;
+}
+.summary {
+  max-width: 520px;
 }
 </style>

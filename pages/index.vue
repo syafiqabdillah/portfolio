@@ -1,7 +1,7 @@
 <template>
   <div>
     <Hero />
-    <Skills />
+    <!-- <Skills /> -->
   </div>
 </template>
 
