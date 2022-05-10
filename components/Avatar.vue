@@ -3,7 +3,7 @@
     <div
       class="h-[170px] w-[170px] rounded-full border-4 border-dotted border-lightseagreen group-hover:border-accent animate-spin-slow"
     ></div>
-    <img src="~/assets/img/syafiq.jpg" alt="" class="avatar" />
+    <img src="~/assets/img/syafiq-river.jpg" alt="" class="avatar" />
   </div>
 </template>
 

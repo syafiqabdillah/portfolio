@@ -51,7 +51,6 @@ export default {
   color: var(--light);
   position: relative;
   padding: 0rem 1rem 3rem;
-  margin-top: 1rem;
 
   .link {
     i {
@@ -78,6 +77,10 @@ export default {
     &:hover .text {
       transform: translateY(0);
       opacity: 1;
+    }
+
+    &:hover i {
+      color: var(--primary);
     }
 
     &:nth-child(odd):hover i {
