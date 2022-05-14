@@ -13,20 +13,20 @@ export default {
   data() {
     return {
       socials: {
+        github: {
+          url: 'https://www.github.com/syafiqabdillah',
+          icon: 'icofont-github',
+          text: 'Follow me on Github',
+        },
         twitter: {
           url: 'https://www.twitter.com/umarghanis',
           icon: 'icofont-twitter',
-          text: 'Follow me on Twitter',
+          text: 'Stalk me on Twitter',
         },
         linkedin: {
           url: 'https://www.linkedin.com/in/syafiq-abdillah-1b634b78/',
           icon: 'icofont-linkedin',
           text: "Let's connect on Linkedin",
-        },
-        github: {
-          url: 'https://www.github.com/syafiqabdillah',
-          icon: 'icofont-github',
-          text: 'Follow me on Github',
         },
       },
     }
@@ -79,10 +79,6 @@ export default {
       opacity: 1;
     }
 
-    &:hover i {
-      color: var(--primary);
-    }
-
     &:nth-child(odd):hover i {
       transform: translateY(var(--vertical-move))
         rotate(calc(0deg - var(--rotate-deg)));
@@ -90,6 +86,14 @@ export default {
 
     &:nth-child(even):hover i {
       transform: translateY(var(--vertical-move)) rotate(var(--rotate-deg));
+    }
+
+    &:nth-child(2):hover i {
+      color: var(--primary);
+    }
+
+    &:nth-child(3):hover i {
+      color: var(--accent);
     }
   }
 }

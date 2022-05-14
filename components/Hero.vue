@@ -5,23 +5,47 @@
       class="text-center p-4 flex flex-col gap-6 items-center justify-center"
     >
       <Avatar />
-      <h1 class="font-bold text-4xl">
-        Solving <span class="red fancy-text">problems</span><br />
-        with &lt;<span class="green fancy-text">code</span>/&gt;
+      <h1 class="font-bold text-3xl">
+        <span class="fancy-text">Syafiq</span>
+        <span class="green fancy-text">Abdillah</span>
+        <span class="red fancy-text">Umarghanis</span>
       </h1>
-      <p class="summary">
-        I'm Syafiq, a <span class="fancy-text red">software engineer</span>. My
-        hobby is to fulfil my <span class="fancy-text red">curiosity</span> by
-        building <span class="fancy-text red">side projects</span>. 🍵 &nbsp;and
-        ☕ &nbsp;are my best friends.
-      </p>
+      <div class="flex flex-col gap-2">
+        <p>
+          Hi, I am Syafiq, a
+          <span class="fancy-text red">software engineer</span>
+        </p>
+        <p>
+          I have created too many
+          <span class="green fancy-text cursor-pointer">side projects</span>
+        </p>
+        <p class="group">Welcome, <span class="group-hover:hidden">strangers</span> <span class="hidden group-hover:inline-block">friends</span></p>
+      </div>
       <SocialLinks />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'Syafiq Abdillah Umarghanis',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'A lifelong learned software engineer. Like to do any sort of side projects for the sake of adventure.',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://syafiqau.my.id',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss">
