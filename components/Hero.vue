@@ -1,6 +1,6 @@
 <template>
-  <div class="hero min-h-screen min-w-[320px]">
-    <img class="bg" src="~assets/bg.jpg" alt="" />
+  <div class="hero min-h-screen min-w-[320px] bg-[url('/bg.jpg')] bg-cover bg-black bg-opacity-80 bg-blend-overlay bg-no-repeat">
+    <!-- <img class="bg" src="~assets/bg.jpg" alt="" /> -->
     <div
       class="text-center p-4 flex flex-col gap-6 items-center justify-center"
     >
@@ -10,16 +10,16 @@
         <span class="green fancy-text">Abdillah</span>
         <span class="red fancy-text">Umarghanis</span>
       </h1>
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 items-center">
         <p>
           Hi, I am Syafiq, a
           <span class="fancy-text red">software engineer</span>
         </p>
         <p>
-          I have created too many
-          <span class="green fancy-text cursor-pointer">side projects</span>
+          I am happy to share my
+          <span class="green fancy-text cursor-pointer">side projects</span> with you
         </p>
-        <p class="group">Welcome, <span class="group-hover:hidden">strangers</span> <span class="hidden group-hover:inline-block">friends</span></p>
+        <p class="group">Welcome, <span class="group-hover:hidden underline">strangers</span> <span class="hidden group-hover:inline-block">friends :)</span></p>
       </div>
       <SocialLinks />
     </div>
