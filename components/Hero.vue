@@ -1,6 +1,5 @@
 <template>
   <div class="hero min-h-screen min-w-[320px] bg-[url('/bg.jpg')] bg-cover bg-black bg-opacity-80 bg-blend-overlay bg-no-repeat">
-    <!-- <img class="bg" src="~assets/bg.jpg" alt="" /> -->
     <div
       class="text-center p-4 flex flex-col gap-6 items-center justify-center"
     >
@@ -19,7 +18,6 @@
           I am happy to share my
           <span class="green fancy-text cursor-pointer">side projects</span> with you
         </p>
-        <p class="group">Welcome, <span class="group-hover:hidden underline">strangers</span> <span class="hidden group-hover:inline-block">friends :)</span></p>
       </div>
       <SocialLinks />
     </div>
@@ -28,23 +26,7 @@
 
 <script>
 export default {
-  head: {
-    title: 'Syafiq Abdillah Umarghanis',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'A lifelong learned software engineer. Like to do any sort of side projects for the sake of adventure.',
-      },
-    ],
-    link: [
-      {
-        rel: 'canonical',
-        href: 'https://syafiqau.my.id',
-      },
-    ],
-  },
+
 }
 </script>
 

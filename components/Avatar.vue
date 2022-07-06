@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar-container group hover:scale-110 hover:-translate-y-4">
+  <div class="avatar-container group hover:scale-110">
     <div
       class="h-[170px] w-[170px] rounded-full border-4 border-dotted border-lightseagreen group-hover:border-accent animate-spin-slow"
     ></div>
@@ -8,7 +8,7 @@
       height="170"
       width="170"
       alt=""
-      class="avatar"
+      class="avatar hover:rotate-[-20deg] transition-all duration-100"
     />
   </div>
 </template>
