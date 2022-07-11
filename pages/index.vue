@@ -1,8 +1,10 @@
 <template>
   <div class="relative">
     <Hero />
+    <Projects />
     <NavTop />
     <NavBottom />
+    <ToTop />
   </div>
 </template>
 

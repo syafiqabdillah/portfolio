@@ -4,7 +4,7 @@
       class="text-center p-4 flex flex-col gap-6 items-center justify-center"
     >
       <Avatar />
-      <h1 class="font-bold text-3xl">
+      <h1 class="font-bold text-2xl">
         <span class="fancy-text">Syafiq</span>
         <span class="green fancy-text">Abdillah</span>
         <span class="red fancy-text">Umarghanis</span>

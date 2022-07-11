@@ -20,8 +20,8 @@ export default {
           label: 'About',
         },
         {
-          url: '#works',
-          label: 'Works',
+          url: '#projects',
+          label: 'Projects',
         },
       ],
     }
