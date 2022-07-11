@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="relative">
     <Hero />
-    <Projects />
+    <NavTop />
+    <NavBottom />
   </div>
 </template>
 

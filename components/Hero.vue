@@ -1,5 +1,5 @@
 <template>
-  <div class="hero min-h-screen min-w-[320px] bg-[url('/bg.jpg')] bg-cover bg-black bg-opacity-80 bg-blend-overlay bg-no-repeat">
+  <div id="about" class="hero min-h-screen min-w-[320px] bg-primary">
     <div
       class="text-center p-4 flex flex-col gap-6 items-center justify-center"
     >
@@ -10,14 +10,7 @@
         <span class="red fancy-text">Umarghanis</span>
       </h1>
       <div class="flex flex-col gap-2 items-center">
-        <p>
-          Hi, I am Syafiq, a
-          <span class="fancy-text red">software engineer</span>
-        </p>
-        <p>
-          I am happy to share my
-          <span class="green fancy-text cursor-pointer">side projects</span> with you
-        </p>
+        <p>(software engineer)</p>
       </div>
       <SocialLinks />
     </div>
@@ -25,9 +18,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss">

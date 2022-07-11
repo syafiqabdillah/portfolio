@@ -12,8 +12,11 @@ module.exports = {
         'spin-slow': 'spin 30s linear infinite',
       },
       colors: {
+        primary: '#2C3639',
+        secondary: '#3F4E4F',
+        accent: '#A27B5C',
+        light: '#DCD7C9',
         lightseagreen: '#4AB2AA',
-        accent: '#e94560',
       },
     },
   },

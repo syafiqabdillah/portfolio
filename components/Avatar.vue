@@ -1,15 +1,14 @@
 <template>
-  <div class="avatar-container group hover:scale-110">
-    <div
-      class="h-[170px] w-[170px] rounded-full border-4 border-dotted border-lightseagreen group-hover:border-accent animate-spin-slow"
-    ></div>
-    <img
-      src="~/assets/img/syafiq-river.jpg"
-      height="170"
-      width="170"
-      alt=""
-      class="avatar hover:rotate-[-20deg] transition-all duration-100"
-    />
+  <div class="avatar-container">
+    <div class="avatar bg-light p-1 hover:scale-125 transition duration-300">
+      <img
+        src="~/assets/img/syafiq-river.jpg"
+        height="100"
+        width="100"
+        alt="Syafiq on the river"
+        class="avatar"
+      />
+    </div>
   </div>
 </template>
 
@@ -17,27 +16,17 @@
 export default {}
 </script>
 
-<style>
-:root {
-  --avatar-size: 170px;
-  --border-color: var(--accent);
-}
-.avatar-container {
-  z-index: 0;
-  position: relative;
-  height: var(--avatar-size);
-  width: var(--avatar-size);
-  transition: transform 200ms;
-}
-img.avatar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  height: var(--avatar-size);
-  width: var(--avatar-size);
-  border-radius: 50%;
-  object-fit: cover;
-  padding: 0.7em;
+<style scoped>
+.avatar {
+  clip-path: polygon(
+    10% 0,
+    90% 0,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0 90%,
+    0 10%
+  );
 }
 </style>
