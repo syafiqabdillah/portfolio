@@ -29,7 +29,14 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxt/postcss8'],
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/fontawesome'],
+
+  fontawesome: {
+    icons: {
+      solid: ['faExternalLink', 'faArrowUp'],
+      brands: ['faTwitter', 'faGithub', 'faInstagram', 'faLinkedin'],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

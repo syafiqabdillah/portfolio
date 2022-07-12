@@ -1,14 +1,16 @@
 <template>
   <div
-    class="fixed left-1/2 -translate-x-1/2 bottom-16 bg-light h-10 w-10 flex justify-center cursor-pointer items-center rounded"
+    class="fixed left-1/2 -translate-x-1/2 bottom-16 bg-light h-10 w-10 flex justify-center cursor-pointer items-center rounded text-primary hover:text-accent"
     v-if="show"
     @click="scrollTop"
   >
-    <i class="text-accent icofont-arrow-up"></i>
+    <font-awesome-icon :icon="faArrowUp" class="h-4" />
   </div>
 </template>
 
 <script>
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+
 export default {
   data() {
     return {
@@ -29,6 +31,9 @@ export default {
   computed: {
     show() {
       return this.scrollPosition > 500
+    },
+    faArrowUp() {
+      return faArrowUp
     },
   },
 }

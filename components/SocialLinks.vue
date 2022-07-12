@@ -1,13 +1,25 @@
 <template>
-  <div class="links">
-    <div class="link" v-for="social in socials" :key="social.url">
-      <i @click="toPage(social.url)" :class="social.icon + ' clickable'"> </i>
-      <span class="text">{{ social.text }}</span>
-    </div>
+  <div class="flex flex-col gap-2">
+    <a
+      class="border border-light hover:bg-light hover:text-secondary rounded px-4 py-1 flex gap-2 items-center text-left"
+      v-for="social in socials"
+      :key="social.url"
+      :href="social.url"
+      target="_blank"
+    >
+      <font-awesome-icon :icon="social.icon" class="h-8" />
+      <span>{{ social.text }}</span>
+    </a>
   </div>
 </template>
 
 <script>
+import {
+  faTwitter,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 export default {
   name: 'Links',
   data() {
@@ -15,86 +27,45 @@ export default {
       socials: {
         github: {
           url: 'https://www.github.com/syafiqabdillah',
-          icon: 'icofont-github',
+          icon: faGithub,
           text: 'Follow me on Github',
         },
         twitter: {
           url: 'https://www.twitter.com/umarghanis',
-          icon: 'icofont-twitter',
+          icon: faTwitter,
           text: 'Stalk me on Twitter',
+        },
+        instagram: {
+          url: 'https://www.instagram.com/syafiq.au',
+          icon: faInstagram,
+          text: 'See me on Instagram',
         },
         linkedin: {
           url: 'https://www.linkedin.com/in/syafiq-abdillah-1b634b78/',
-          icon: 'icofont-linkedin',
+          icon: faLinkedin,
           text: "Let's connect on Linkedin",
         },
       },
     }
   },
   methods: {
-    toPage(url) {
-      window.open(url)
+    showButton(url) {},
+  },
+  computed: {
+    faTwitter() {
+      return faTwitter
+    },
+    faGithub() {
+      return faGithub
+    },
+    faInstagram() {
+      return faInstagram
+    },
+    faLinkedin() {
+      return faLinkedin
     },
   },
 }
 </script>
 
-<style lang="scss">
-:root {
-  --vertical-move: -10px;
-  --rotate-deg: 25deg;
-}
-.links {
-  gap: 3rem;
-  display: flex;
-  justify-content: center;
-  color: var(--light);
-  position: relative;
-  padding: 0rem 1rem 3rem;
-
-  .link {
-    i {
-      font-size: 2.5rem;
-      transition: all 200ms;
-      display: block;
-      z-index: 100;
-    }
-
-    .text {
-      font-size: 1rem;
-      font-family: 'Lexend';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateY(3rem);
-      transition: all 200ms;
-      display: block;
-      width: 100%;
-      text-align: center;
-      opacity: 0;
-    }
-
-    &:hover .text {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    &:nth-child(odd):hover i {
-      transform: translateY(var(--vertical-move))
-        rotate(calc(0deg - var(--rotate-deg)));
-    }
-
-    &:nth-child(even):hover i {
-      transform: translateY(var(--vertical-move)) rotate(var(--rotate-deg));
-    }
-
-    &:nth-child(2):hover i {
-      color: var(--primary);
-    }
-
-    &:nth-child(3):hover i {
-      color: var(--accent);
-    }
-  }
-}
-</style>
+<style lang="scss"></style>

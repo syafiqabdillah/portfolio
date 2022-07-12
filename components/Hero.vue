@@ -10,7 +10,11 @@
         <span class="red fancy-text">Umarghanis</span>
       </h1>
       <div class="flex flex-col gap-2 items-center">
-        <p>(software engineer)</p>
+        <p>
+          I create
+          <span class="text-[8px]">weird and hopefully </span>useful stuff with
+          code
+        </p>
       </div>
       <SocialLinks />
     </div>

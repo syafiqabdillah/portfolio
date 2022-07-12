@@ -1,6 +1,8 @@
 <template>
   <div class="avatar-container">
-    <div class="avatar bg-light p-1 hover:scale-125 transition duration-300">
+    <div
+      class="avatar bg-accent hover:bg-light p-1 hover:scale-125 transition ease-linear duration-300"
+    >
       <img
         src="~/assets/img/syafiq-river.jpg"
         height="100"
