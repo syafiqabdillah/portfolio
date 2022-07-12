@@ -1,8 +1,10 @@
 <template>
   <nav
-    class="polygon fixed top-0 left-1/2 -translate-x-1/2 h-12 w-[250px] bg-light text-primary flex items-center justify-center"
+    class="polygon fixed top-0 left-1/2 -translate-x-1/2 h-12 w-[300px] bg-light text-primary flex items-center justify-center"
   >
-    <a href="/" class="hover:text-accent text-center"> Syafiq Abdillah </a>
+    <a href="/" class="hover:text-accent text-center">
+      Syafiq Abdillah Umarghanis</a
+    >
   </nav>
 </template>
 

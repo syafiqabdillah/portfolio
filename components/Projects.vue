@@ -1,7 +1,7 @@
 <template>
-  <div
+  <section
     id="projects"
-    class="min-h-screen bg-primary text-light flex flex-col items-center justify-start pt-20 px-2 md:px-0 pb-32"
+    class="min-h-screen w-full bg-primary text-light flex flex-col items-center justify-start pt-20 px-2 md:px-0 pb-32"
   >
     <h2 class="text-2xl font-semibold tracking-wider">Projects</h2>
     <div class="mt-8 flex flex-col gap-10">
@@ -26,16 +26,17 @@
         </div>
         <div class="px-2">
           <div class="mt-4 text-xl">{{ project.name }}</div>
-          <a
-            class="text-sm hover:text-accent hover:underline mt-2 w-max flex justify-start items-center gap-2"
-            :href="project.url"
-            >{{ getShortenUrl(project.url) }}
-            <font-awesome-icon :icon="faExternalLink" class="h-3" />
-          </a>
+          <div>
+            <a
+              class="text-sm hover:text-accent hover:underline mt-2 flex justify-start items-center gap-2"
+              :href="project.url"
+              >{{ getShortenUrl(project.url) }}
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
