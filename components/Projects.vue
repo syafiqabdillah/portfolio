@@ -5,41 +5,15 @@
   >
     <h2 class="text-2xl font-semibold tracking-wider">Projects</h2>
     <div class="mt-8 flex flex-col gap-10">
-      <div v-for="project in projects" :key="project.name">
-        <div class="relative overflow-hidden group">
-          <img
-            :src="project.src"
-            :alt="project.name"
-            class="w-full object-cover"
-          />
-          <div
-            class="absolute left-0 top-0 w-full h-full bg-primary bg-opacity-90 translate-y-full group-hover:translate-y-0 transition ease-in-out duration-500"
-          >
-            <ul
-              class="w-full h-full flex flex-col gap-2 justify-center items-center"
-            >
-              <li v-for="t in project.tech" :key="t" class="md:text-xl">
-                {{ t }}
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="px-2">
-          <div class="mt-4 text-xl">{{ project.name }}</div>
-          <div>
-            <a
-              class="text-sm hover:text-accent hover:underline mt-2 flex justify-start items-center gap-2"
-              :href="project.url"
-              >{{ getShortenUrl(project.url) }}
-            </a>
-          </div>
-        </div>
-      </div>
+      <project-item
+        v-for="project in projects"
+        :key="project.name"
+        :project="project"
+      />
     </div>
   </section>
 </template>
 <script>
-import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 export default {
   data() {
     return {
@@ -80,7 +54,7 @@ export default {
           src: require('~/assets/img/expensez.jpg'),
           url:
             'https://play.google.com/store/apps/details?id=com.syafiqabdillah.expensez',
-          tech: ['Flutter', 'Dart', 'MongoDB', 'Express.js'],
+          tech: ['Flutter', 'Dart'],
         },
         {
           name: 'Wedding Invitation',
@@ -90,17 +64,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    getShortenUrl(url) {
-      if (url.includes('www.')) return url.split('www.')[1]
-      return url
-    },
-  },
-  computed: {
-    faExternalLink() {
-      return faExternalLink
-    },
   },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-2">
     <a
-      class="border border-light hover:bg-light hover:text-secondary rounded px-4 py-1 flex gap-2 items-center text-left"
+      class="border border-light hover:bg-light hover:text-secondary transition duration-300 rounded px-4 py-1 flex gap-2 items-center text-left"
       v-for="social in socials"
       :key="social.url"
       :href="social.url"
