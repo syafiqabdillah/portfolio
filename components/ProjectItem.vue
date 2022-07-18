@@ -1,18 +1,24 @@
 <template>
   <div>
     <div class="relative overflow-hidden group">
-      <img :src="project.src" :alt="project.name" class="w-full object-cover" />
-      <tech-stacks :toggleOpen="toggleOpen" :project="project" :open="open" />
+      <img
+        :src="project.src"
+        :alt="project.name"
+        class="w-full object-cover md:rounded-xl"
+      />
     </div>
     <div class="px-2">
       <div class="mt-4 text-xl">{{ project.name }}</div>
-      <div>
-        <a
-          class="text-sm text-accent underline mt-2 inline-block"
-          :href="project.url"
-          >{{ getShortenUrl(project.url) }}
-        </a>
-      </div>
+      <a
+        class="text-sm text-accent underline mt-2 inline-block"
+        :href="project.url"
+        >{{ getShortenUrl(project.url) }}
+      </a>
+      <ul class="mt-2">
+        <li v-for="t in project.tech" class="list-disc ml-4" :key="t">
+          {{ t }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>

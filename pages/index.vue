@@ -2,6 +2,7 @@
   <div class="relative">
     <Hero />
     <Projects />
+    <Experience />
     <NavTop />
     <NavBottom />
     <ToTop />

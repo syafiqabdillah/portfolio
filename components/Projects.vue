@@ -3,13 +3,14 @@
     id="projects"
     class="min-h-screen w-full bg-primary text-light flex flex-col items-center justify-start pt-20 px-2 md:px-0 pb-32"
   >
-    <h2 class="text-2xl font-semibold tracking-wider">Projects</h2>
-    <div class="mt-8 flex flex-col gap-10">
-      <project-item
-        v-for="project in projects"
-        :key="project.name"
-        :project="project"
-      />
+    <div class="max-w-2xl">
+      <div class="mt-8 flex flex-col gap-10">
+        <project-item
+          v-for="project in projects"
+          :key="project.name"
+          :project="project"
+        />
+      </div>
     </div>
   </section>
 </template>

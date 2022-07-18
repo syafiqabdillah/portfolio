@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="polygon fixed bottom-0 left-1/2 -translate-x-1/2 h-12 px-12 bg-light text-primary"
+    class="polygon fixed bottom-0 left-1/2 -translate-x-1/2 h-12 px-16 bg-light text-primary"
   >
     <ul class="flex w-full h-full justify-center items-center gap-10">
       <li v-for="item in navs" :key="item.label">
@@ -22,6 +22,10 @@ export default {
         {
           url: '#projects',
           label: 'Projects',
+        },
+        {
+          url: '#experience',
+          label: 'Exp',
         },
       ],
     }
