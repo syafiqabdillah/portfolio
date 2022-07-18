@@ -9,13 +9,14 @@
     </div>
     <div class="px-2">
       <div class="mt-4 text-xl">{{ project.name }}</div>
+      <div class="mt-2 text-sm">{{ project.desc }}</div>
       <a
         class="text-sm text-accent underline mt-2 inline-block"
         :href="project.url"
         >{{ getShortenUrl(project.url) }}
       </a>
       <ul class="mt-2">
-        <li v-for="t in project.tech" class="list-disc ml-4" :key="t">
+        <li v-for="t in project.tech" class="list-disc ml-6" :key="t">
           {{ t }}
         </li>
       </ul>
