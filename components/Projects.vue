@@ -20,8 +20,17 @@ export default {
     return {
       projects: [
         {
+          name: 'Not My Anime List',
+          desc:
+            'My spin-off of MyAnimeList using their AniList API. You can search anime, create/edit/delete collections, and save your choice of anime into your collections.',
+          src: require('~/assets/img/notmal.png'),
+          url: 'https://normal.netlify.app',
+          tech: ['React.js', 'GraphQL', 'Emotion', 'Progressive Web Apps'],
+        },
+        {
           name: 'Makanapaya',
-          desc: 'A website that helps you think of what to eat or drink',
+          desc:
+            'A website that helps you think of what to eat or drink. Used by up to hundreds users per day.',
           src: require('~/assets/img/makanapaya.png'),
           url: 'https://www.makanapaya.my.id',
           tech: [
