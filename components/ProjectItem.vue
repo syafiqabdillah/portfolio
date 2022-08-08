@@ -13,6 +13,7 @@
       <a
         class="text-sm text-accent underline mt-2 inline-block"
         :href="project.url"
+        target="_blank"
         >{{ getShortenUrl(project.url) }}
       </a>
       <ul class="mt-2">

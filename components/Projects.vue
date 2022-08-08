@@ -24,7 +24,7 @@ export default {
           desc:
             'My spin-off of MyAnimeList using their AniList API. You can search anime, create/edit/delete collections, and save your choice of anime into your collections.',
           src: require('~/assets/img/notmal.png'),
-          url: 'https://normal.netlify.app',
+          url: 'https://notmal.netlify.app',
           tech: ['React.js', 'GraphQL', 'Emotion', 'Progressive Web Apps'],
         },
         {
