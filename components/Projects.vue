@@ -98,13 +98,6 @@ export default {
             'https://play.google.com/store/apps/details?id=com.syafiqabdillah.expensez',
           tech: ['Flutter', 'Dart'],
         },
-        {
-          name: 'Wedding Invitation',
-          desc: 'Minimalist and ellegant wedding invitation.',
-          src: require('~/assets/img/wedding.png'),
-          url: 'https://afifasyafiqjourney.my.id',
-          tech: ['Next.js', 'React.js', 'MongoDB', 'Express.js'],
-        },
       ],
     }
   },
