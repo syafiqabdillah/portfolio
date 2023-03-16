@@ -1,7 +1,8 @@
 <template>
   <nav
-    class="polygon fixed bottom-0 left-1/2 -translate-x-1/2 h-12 px-16 bg-light text-primary"
+    class="fixed bottom-0 right-0 rounded-tl-2xl h-12 px-16 bg-light text-primary"
   >
+    <ToTop />
     <ul class="flex w-full h-full justify-center items-center gap-10">
       <li v-for="item in navs" :key="item.label">
         <a :href="item.url" class="hover:text-accent">{{ item.label }}</a>
@@ -25,7 +26,7 @@ export default {
         },
         {
           url: '#experience',
-          label: 'Exp',
+          label: 'Experience',
         },
       ],
     }
@@ -33,8 +34,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.polygon {
-  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
-}
-</style>

@@ -3,7 +3,7 @@
     id="projects"
     class="min-h-screen w-full bg-primary text-light flex flex-col items-center justify-start pt-20 px-2 md:px-0 pb-32"
   >
-    <div class="max-w-2xl">
+    <div class="max-w-4xl">
       <div class="mt-8 flex flex-col gap-10">
         <project-item
           v-for="project in projects"
@@ -54,9 +54,9 @@ export default {
         {
           name: 'Kenal Kampus',
           desc:
-            'Collection of stories from students in universities all over Indonesia. It helps high school student to choose where to pursue their study.',
+            'Collection of stories from students and alumni in universities all over Indonesia. It helps high school student to choose where to pursue their study.',
           src: require('~/assets/img/kenalkampus.png'),
-          url: 'https://www.kenalkampus.com',
+          url: 'https://kenalkampus.vercel.app/',
           tech: [
             'Nuxt.js',
             'Vue.js',

@@ -5,7 +5,6 @@
     <Experience />
     <NavTop />
     <NavBottom />
-    <ToTop />
   </div>
 </template>
 
@@ -25,7 +24,7 @@ export default {
     link: [
       {
         rel: 'canonical',
-        href: 'https://syafiqau.my.id',
+        href: 'https://www.syafiqau.my.id',
       },
     ],
   },

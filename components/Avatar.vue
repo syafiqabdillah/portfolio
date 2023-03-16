@@ -1,34 +1,15 @@
 <template>
   <div class="avatar-container">
     <div
-      class="avatar bg-accent hover:bg-light p-1 hover:scale-125 transition ease-linear duration-300"
+      class="hover:bg-light p-1 rounded-xl transition ease-linear duration-300"
     >
       <img
-        src="~/assets/img/syafiq-river.jpg"
-        height="100"
-        width="100"
+        src="~/assets/img/avatar.jpg"
+        height="200"
+        width="200"
         alt="Syafiq on the river"
-        class="avatar"
+        class="rounded-xl"
       />
     </div>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style scoped>
-.avatar {
-  clip-path: polygon(
-    10% 0,
-    90% 0,
-    100% 10%,
-    100% 90%,
-    90% 100%,
-    10% 100%,
-    0 90%,
-    0 10%
-  );
-}
-</style>

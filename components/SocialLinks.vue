@@ -1,11 +1,12 @@
 <template>
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-4">
     <a
-      class="border border-light hover:bg-light hover:text-secondary transition duration-300 rounded px-4 py-1 flex gap-2 items-center text-left"
+      class="border border-light hover:border-text-secondary hover:bg-light hover:text-secondary transition duration-300 rounded-lg px-4 py-2 flex gap-2 items-center text-left"
       v-for="social in socials"
       :key="social.url"
       :href="social.url"
       target="_blank"
+      
     >
       <font-awesome-icon :icon="social.icon" class="h-8" />
       <span>{{ social.text }}</span>
@@ -47,9 +48,6 @@ export default {
         },
       },
     }
-  },
-  methods: {
-    showButton(url) {},
   },
   computed: {
     faTwitter() {

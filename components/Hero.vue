@@ -4,7 +4,7 @@
       class="text-center p-4 flex flex-col gap-6 items-center justify-center"
     >
       <Avatar />
-      <h1 class="font-bold text-2xl">
+      <h1 class="font-bold text-2xl lg:text-3xl">
         <span class="fancy-text">Syafiq</span>
         <span class="green fancy-text">Abdillah</span>
         <span class="red fancy-text">Umarghanis</span>
@@ -13,7 +13,7 @@
         <p>
           I create
           <span class="text-[8px]">weird and hopefully </span>useful stuff with
-          code
+          code. 
         </p>
       </div>
       <SocialLinks />
