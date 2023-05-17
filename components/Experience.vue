@@ -1,7 +1,7 @@
 <template>
   <section id="experience" class="min-h-screen bg-primary flex flex-col justify-center items-center text-light">
-    <div class="flex flex-col gap-4">
-      <div v-for="exp in experiences" :key="exp.name" class="border-2 border-secondary rounded-xl py-3 px-4">
+    <div class="flex flex-col gap-8">
+      <div v-for="exp in experiences" :key="exp.name" >
         <h4>
           {{ exp.name }}
         </h4>
@@ -20,7 +20,7 @@ export default {
       experiences: [
         {
           name: 'Frontend Engineer @ ALAMI / Hijra',
-          timeline: 'September 2022 - current',
+          timeline: 'September 2022 - now',
           description: ''
         },
         {

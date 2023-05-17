@@ -71,7 +71,7 @@ export default {
           desc:
             'A mobile-first web app that lets you convert your used vegetable oil into money or new oils. It was our submission in Indonesia Digital Tribe 2021-2022 event that led us to Top 7 position out of 2000+ teams.',
           src: require('~/assets/img/jlantahhero.png'),
-          url: 'https://www.jlantahhero.com',
+          url: 'https://jlantahhero.netlify.app/',
           tech: ['Next.js', 'React.js', 'MongoDB', 'Express.js', 'Mixpanel'],
         },
         {
