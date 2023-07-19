@@ -1,11 +1,9 @@
 <template>
-  <nav
-    class="fixed bottom-0 right-0 rounded-tl-2xl h-12 px-16 bg-light text-primary"
-  >
+  <nav class="fixed bottom-0 right-0 rounded-tl-2xl min-h-12 bg-light text-primary">
     <ToTop />
-    <ul class="flex w-full h-full justify-center items-center gap-10">
+    <ul class="flex justify-end items-center px-4 py-3 gap-x-10 gap-y-2 flex-wrap ">
       <li v-for="item in navs" :key="item.label">
-        <a :href="item.url" class="hover:text-accent">{{ item.label }}</a>
+        <a :href="item.url" :target="target(item.url)" class="hover:text-accent">{{ item.label }}</a>
       </li>
     </ul>
   </nav>
@@ -31,6 +29,11 @@ export default {
       ],
     }
   },
+  methods: {
+    target(url) {
+      return url.includes('http') ? '_blank' : '_self'
+    },
+  }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute left-1/2 -translate-x-1/2 bottom-16 bg-light h-10 w-10 flex justify-center cursor-pointer items-center rounded text-primary hover:text-accent"
+    class="absolute right-4 bottom-16 bg-light h-10 w-10 flex justify-center cursor-pointer items-center rounded border-2 border-primary text-primary hover:text-light hover:bg-primary transition-all duration-300"
     v-if="show"
     @click="scrollTop"
   >

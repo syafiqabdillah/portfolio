@@ -1,7 +1,7 @@
 <template>
   <section id="experience" class="min-h-screen bg-primary flex flex-col justify-center items-center text-light">
     <div class="flex flex-col gap-8">
-      <div v-for="exp in experiences" :key="exp.name" >
+      <div v-for="exp in experiences" :key="exp.name">
         <h4>
           {{ exp.name }}
         </h4>
@@ -19,9 +19,14 @@ export default {
     return {
       experiences: [
         {
+          name: 'Senior Frontend Engineer',
+          timeline: 'July 2023 - now',
+          description: '',
+        },
+        {
           name: 'Frontend Engineer @ ALAMI / Hijra',
-          timeline: 'September 2022 - now',
-          description: ''
+          timeline: 'September 2022 - June 2023',
+          description: '',
         },
         {
           name: 'Lead Webdev Team @ Justika',
@@ -33,7 +38,6 @@ export default {
           timeline: 'April 2021 - August 2022',
           description: '',
         },
-
       ],
     }
   },

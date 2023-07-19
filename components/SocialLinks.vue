@@ -1,13 +1,7 @@
 <template>
   <div class="flex flex-col gap-4">
-    <a
-      class="border border-light hover:border-text-secondary hover:bg-light hover:text-secondary transition duration-300 rounded-lg px-4 py-2 flex gap-2 items-center text-left"
-      v-for="social in socials"
-      :key="social.url"
-      :href="social.url"
-      target="_blank"
-      
-    >
+    <a class="border border-light hover:border-text-secondary hover:bg-light hover:text-secondary transition duration-300 rounded-lg px-4 py-3 flex gap-4 items-center text-left"
+      v-for="social in socials" :key="social.url" :href="social.url" target="_blank">
       <font-awesome-icon :icon="social.icon" class="h-8" />
       <span>{{ social.text }}</span>
     </a>
@@ -21,6 +15,7 @@ import {
   faInstagram,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
+import { faFileText } from '@fortawesome/free-solid-svg-icons'
 export default {
   name: 'Links',
   data() {
@@ -46,22 +41,13 @@ export default {
           icon: faLinkedin,
           text: "Let's connect on Linkedin",
         },
+        bragDoc: {
+          url: 'https://bit.ly/syafiq-brag-doc',
+          icon: faFileText,
+          text: "Read my Brag Doc"
+        }
       },
     }
-  },
-  computed: {
-    faTwitter() {
-      return faTwitter
-    },
-    faGithub() {
-      return faGithub
-    },
-    faInstagram() {
-      return faInstagram
-    },
-    faLinkedin() {
-      return faLinkedin
-    },
   },
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="about" class="hero min-h-screen min-w-[320px] bg-primary">
     <div
-      class="text-center p-4 flex flex-col gap-6 items-center justify-center"
+      class="text-center pt-20 pb-16 px-4 flex flex-col gap-6 items-center justify-center"
     >
       <Avatar />
       <h1 class="font-bold text-2xl lg:text-3xl">
