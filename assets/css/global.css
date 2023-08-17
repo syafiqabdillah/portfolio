@@ -3,6 +3,8 @@
   --light: bisque;
   --accent: #e94560;
   --primary: lightseagreen;
+  --primary-light: rgb(220, 215, 201);
+  --scroll: 0;
 }
 .red {
   color: #e94560;

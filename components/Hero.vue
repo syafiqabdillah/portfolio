@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="hero min-h-screen min-w-[320px] bg-primary">
+  <div id="about" class="min-h-screen z-10 min-w-[320px] fixed top-0 left-0 right-0">
     <div
       class="text-center pt-20 pb-16 px-4 flex flex-col gap-6 items-center justify-center"
     >
@@ -10,10 +10,9 @@
         <span class="red fancy-text">Umarghanis</span>
       </h1>
       <div class="flex flex-col gap-2 items-center">
-        <p>
+        <p class="text-light">
           I create
-          <span class="text-[8px]">weird and hopefully </span>useful stuff with
-          code. 
+          <span class="text-[8px]">weird and hopefully </span>useful stuff with code.
         </p>
       </div>
       <SocialLinks />
@@ -22,32 +21,34 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    setScrollVar() {
+      const el = document.documentElement;
+      const percentageScrolled = el.scrollTop / el.clientHeight;
+      el.style.setProperty("--scroll", percentageScrolled);
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.setScrollVar);
+    window.addEventListener("resize", this.setScrollVar);
+    this.setScrollVar();
+  },
+  unmounted() {
+    removeEventListener("scroll", this.setScrollVar);
+    removeEventListener("resize", this.setScrollVar);
+  },
+};
 </script>
 
 <style lang="scss">
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: bisque;
+:root {
+  --scroll-treshold: 0.3;
 }
 
-.hero img.bg {
-  background: #171717;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.2);
-  position: absolute;
-  z-index: -1;
-}
-.hero .title {
-  font-weight: 900;
-  font-size: 2.5rem;
-}
-.summary {
-  max-width: 520px;
+#about {
+  background: rgba(44, 54, 57, calc(100% - var(--scroll) * 100%));
+  translate: 0
+    calc((max(var(--scroll), var(--scroll-treshold)) - var(--scroll-treshold)) * -1 * 70%);
 }
 </style>
