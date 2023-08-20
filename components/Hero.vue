@@ -4,10 +4,10 @@
       class="text-center pt-20 pb-16 px-4 flex flex-col gap-6 items-center justify-center"
     >
       <Avatar />
-      <h1 class="font-bold text-2xl lg:text-3xl">
-        <span class="fancy-text">Syafiq</span>
-        <span class="green fancy-text">Abdillah</span>
-        <span class="red fancy-text">Umarghanis</span>
+      <h1
+        class="font-extrabold text-2xl lg:text-6xl uppercase tracking-widest bg-gradient-to-r from-light to-secondary before:bg-gradient-to-r before:from-secondary before:to-light"
+      >
+        Syafiq
       </h1>
       <div class="flex flex-col gap-2 items-center">
         <p class="text-light">
@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 :root {
   --scroll-treshold: 0.3;
 }
@@ -50,5 +50,24 @@ export default {
   background: rgba(44, 54, 57, calc(100% - var(--scroll) * 100%));
   translate: 0
     calc((max(var(--scroll), var(--scroll-treshold)) - var(--scroll-treshold)) * -1 * 70%);
+
+  h1 {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "SYAFIQ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(min(var(--scroll) * 300%, 100%));
+      height: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      z-index: 2;
+    }
+  }
 }
 </style>
