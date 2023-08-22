@@ -42,14 +42,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-:root {
-  --scroll-treshold: 0.3;
-}
-
 #about {
   background: rgba(44, 54, 57, calc(100% - var(--scroll) * 100%));
-  translate: 0
-    calc((max(var(--scroll), var(--scroll-treshold)) - var(--scroll-treshold)) * -1 * 70%);
+  translate: 0 calc((max(var(--scroll), 0.3) - 0.3) * -1 * 150%);
 
   h1 {
     -webkit-background-clip: text;
